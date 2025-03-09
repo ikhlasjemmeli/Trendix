@@ -1,0 +1,72 @@
+
+
+.menu-transition {
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Menu caché */
+  height: 100vh; /* Menu visible */
+  margin-top:-80px;
+}
+.menu-transition.open {
+  transform: translateX(0);
+  height: 100vh; /* Menu visible */
+  margin-top:-80px;
+  
+}
+
+  .relative {
+    position: relative;
+  }
+  
+  .group:hover .dropdown-menu,
+  .group:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Ajustez si nécessaire */
+    left: 0;
+    z-index: 10;
+    width: 140%; /* Ajustez selon votre design */
+    /* Couleur d'arrière-plan */
+    border: 2px solid #e5e7eb; /* Couleur de la bordure */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #374151; /* Couleur du texte */
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #e5e7eb; /* Couleur de survol */
+  }
+  
+  .border-animate {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .border-animate::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    height: 3px;
+    width: 100%;
+    background-color: #e53e3e; /* Couleur de la bordure (rouge) */
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .border-animate:hover::before {
+    left: 0;
+  }

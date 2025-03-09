@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+  html, body {
+    overflow-x: hidden; /* Cache les débordements horizontaux */
+    margin: 0; /* Évite les marges par défaut qui peuvent causer des débordements */
+    padding: 0; /* Évite les espacements par défaut */
+    box-sizing: border-box; /* Assure que les bordures et le padding sont inclus dans la largeur et la hauteur */
+  }
+  

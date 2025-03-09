@@ -1,0 +1,52 @@
+<div class="isolate isolate  px-4 py-[140px] mb-[-70px] inset-x-0 ">
+    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+      <div class="relative left-1/2 -z-10 aspect-1155/678 w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Add New Product</h2>
+      
+    </div>
+    <form [formGroup]="AddForm" class="mx-auto mt-16 max-w-xl sm:mt-12">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div>
+            <label for="title" class="block text-sm/6 font-semibold text-gray-900">Title</label>
+            <input type="text" id="title" formControlName="title" name="title" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400">
+          </div>
+          <div>
+            <label for="price" class="block text-sm/6 font-semibold text-gray-900">Price</label>
+            <input type="number" id="price" formControlName="price" name="price" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400">
+          </div>
+          <div>
+            <label for="category" class="block text-sm/6 font-semibold text-gray-900">Category</label>
+            <select id="category" formControlName="category" name="category"  class="w-full rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-gray-400 ">
+              <option value="MenClothing">Men's Clothing</option>
+              <option value="MenShoes">Men's Shoes</option>
+              <option value="MenAccessories">Men's Accessories</option>
+              <option value="MenSportsLeisure">Men's Sports & Leisure</option>
+              <option value="MenPerfume">Men's Perfume</option>
+              <option value="WomenClothing">Women's Clothing</option>
+              <option value="WomenShoes">Women's Shoes</option>
+              <option value="WomenAccessories">Women's Accessories</option>
+              <option value="WomenBeautyCare">Women's Beauty & Care</option>
+              <option value="WomenSportsLeisure">Women's Sports & Leisure</option>
+              <option value="WomenPerfume">Women's Perfume</option>
+              <option value="WomenMakeup">Women's Makeup</option>
+              
+            </select>
+          </div>
+          <div>
+            <label for="image" class="block text-sm/6 font-semibold text-gray-900">Image URL</label>
+            <input type="text" id="image" formControlName="imageUrL" name="image" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400">
+          </div>
+          <div class="sm:col-span-2">
+            <label for="description" class="block text-sm/6 font-semibold text-gray-900">Description</label>
+            <textarea id="description" formControlName="description" name="description" rows="4" class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-400"></textarea>
+          </div>
+        </div>
+        <div class="mt-10">
+          <button (click)="AddProduct()" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500">Add Product</button>
+        </div>
+      </form>
+      
+  </div>
+  

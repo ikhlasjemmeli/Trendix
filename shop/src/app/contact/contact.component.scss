@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top:    100px;
+    padding-bottom: 55px;
+    //background-color: #f9f9f9;
+    position: relative;
+    margin-bottom: -5%;
+    height: 100%;
+    
+    background: linear-gradient(to top right, #efefef,#f3f3f3,#f6e5e5,#f3f3f3, #e0ece1,#f3f3f3,#e5e4e4);
+}
+
+.container {
+    max-width: 60%;
+
+    max-height: 100%;
+    margin: auto;
+    
+   
+}
+
+.container-title, .containter-location{
+    position: absolute;
+  left: 5%;
+  margin-right: 200px;
+}
+h1 {
+    color: #333;
+}
+.container-title p, .containter-location p{
+    max-width: 350px;
+}
+.contact-info, .locations {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    
+   
+    margin-left: 20%;
+    margin-right: -20%;
+}
+.locations{
+    margin-top: 40px;
+}
+
+.card, .location {
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 calc(50% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5.1%;
+    height: 130px;
+}
+
+.card h2, .location h2 {
+    margin-top: 0;
+}
+
+@media (max-width:1240px)  {
+    .contact-info, .locations {
+       
+        margin-left: 30%;
+        margin-right: -25%;
+    }
+    body{
+        margin-bottom: -5%;
+    }
+}
+@media (max-width:1120px){
+    .contact-info, .locations {
+       
+        margin-left: 40%;
+        margin-right: -35%;
+    }
+    body{
+        margin-bottom: -5.5%;
+    }
+}
+@media (max-width:950px){
+    .contact-info, .locations {
+       
+        margin-left: 40%;
+        margin-right: -35%;
+    }
+    body{
+        margin-bottom: -5.8%;
+    }
+    .container-title{
+          width: 350px;
+    }
+    .container-title p, .containter-location p{
+        width: 350px;
+    }
+}
+@media (max-width:860px){
+    .contact-info, .locations {
+       
+       margin-left: 20%;
+        margin-right: -30%;
+    } body{
+        margin-bottom: -6%;
+    }
+    .locations{
+        margin-top: 70px;
+    }
+    .container-title, .container-title p, .containter-location p{
+        width: 200px;
+    }
+    .card, .location {
+        margin-bottom: 7%;
+    }
+}
+@media (max-width: 760px) {
+    .contact-info, .locations {
+        display: block; /* Change display to block for vertical layout */
+        margin-left: 0; /* Reset margin-left */
+        margin-right: 0; /* Reset margin-right */
+    }
+    body{
+     
+        margin-bottom: -12%;
+    }
+    
+    .card, .location {
+        flex: none; /* Remove flex properties */
+        width: 100%; /* Make cards take full width */
+        margin-bottom: 20px; /* Adjust margin as needed */
+    }
+    
+    .container-title, .container-title p, .containter-location , .containter-location p {
+        position: static; /* Reset position for a vertical flow */
+        margin-right: 0; /* Reset margin-right */
+        width: 100%; /* Full width for better alignment */
+    }
+}

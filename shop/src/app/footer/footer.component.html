@@ -1,0 +1,54 @@
+<div class="relative z-0 pt-4 h-[700px] msm:h-[500px] lg:h-[300px] bg-[black]">
+  <div class="absolute inset-x-0 bottom-5 h-[20px] flex items-center justify-center text-white">
+    <p class="text-sm leading-6 text-white-900">
+      <strong class="font-semibold"> &copy; 2025</strong>
+      <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>
+      TRENDIX. All rights reserved.
+    </p>
+  </div>
+
+  <div class="relative grid grid-cols-1 lg:grid-cols-3 gap-6 items-center justify-center">
+    <!-- Logo Section -->
+    <div class="z-10 p-6 pt-0 sm:pt-6 lg:p-0 flex justify-center items-center">
+      <img src="../../assets/logo.png" class="w-auto lg:h-[200px] h-[100px]" alt="Logo">
+    </div>
+
+    <!-- Navigation Section -->
+    <div class="z-10 p-6 pt-0 lg:p-0 flex justify-center items-center">
+      <div class="flex flex-col msm:flex-row gap-4 justify-center items-center lg:gap-x-8">
+        <a href="" class="text-sm lg:text-base font-semibold leading-6 text-gray-300 hover:text-red-600">Home</a>
+        <a [routerLink]="['/magasin','marbre', '@']" class="text-sm lg:text-base font-semibold leading-6 text-gray-300 hover:text-red-600">Man</a>
+        <a [routerLink]="['/magasin','poncage','@']" class="text-sm lg:text-base font-semibold leading-6 text-gray-300 hover:text-red-600">Woman</a>
+        <a [routerLink]="['/magasin','nettoyage','@']" class="text-sm lg:text-base font-semibold leading-6 text-gray-300 hover:text-red-600">About</a>
+        <a [routerLink]="['/magasin','hotellerie','@']" class="text-sm lg:text-base font-semibold leading-6 text-gray-300 hover:text-red-600">Contact</a>
+      </div>
+    </div>
+
+    <!-- Social & Contact Section -->
+    <div class="flex flex-col gap-6 lg:gap-4 justify-center items-center lg:pl-16">
+      <div class="flex gap-x-12 mb-4 lg:mb-0 lg:-ml-10">
+        <a href="https://www.facebook.com/people/Abrasif-Italia-Klindex/100057219229918/" class="text-2xl font-semibold leading-6 text-gray-300 hover:text-blue-600">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/abrasif_italia_klindex/" class="text-2xl font-semibold leading-6 text-gray-300 hover:text-pink-600">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="mailto:abrasif.italia3@gmail.com" class="text-2xl font-semibold leading-6 text-gray-300 hover:text-gray-600">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="flex flex-col gap-4 lg:gap-6">
+        <a style="cursor: pointer;" (click)="openMap('RJ65+2MM, Sousse')" class="text-2xl font-semibold leading-6 text-gray-300 hover:text-green-600">
+          <i class="fa-solid fa-location-dot"></i><span class="text-sm p-6">Trendix</span>
+        </a>
+        <a href="tel:+216 58 982 743" class="text-2xl font-semibold leading-6 text-gray-300 hover:text-red-600">
+          <i class="fa-solid fa-phone"></i><span class="text-sm p-6">+216 22 45345 345</span>
+        </a>
+        <a href="tel:+216 94 615 025" class="text-2xl font-semibold leading-6 text-gray-300 hover:text-red-600">
+          <i class="fa-solid fa-phone"></i><span class="text-sm p-6">+216 34 3434 34</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

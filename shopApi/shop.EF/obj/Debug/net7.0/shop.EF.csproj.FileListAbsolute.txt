@@ -1,0 +1,17 @@
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\bin\Debug\net7.0\shop.EF.deps.json
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\bin\Debug\net7.0\shop.EF.runtimeconfig.json
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\bin\Debug\net7.0\shop.EF.dll
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\bin\Debug\net7.0\shop.EF.pdb
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\bin\Debug\net7.0\shop.Core.dll
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\bin\Debug\net7.0\shop.Core.pdb
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.csproj.AssemblyReference.cache
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.AssemblyInfoInputs.cache
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.AssemblyInfo.cs
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.csproj.CoreCompileInputs.cache
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.csproj.CopyComplete
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.dll
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\refint\shop.EF.dll
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.pdb
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\shop.EF.genruntimeconfig.cache
+C:\Users\ikhla\OneDrive\Bureau\shopApp\shopApi\shop.EF\obj\Debug\net7.0\ref\shop.EF.dll

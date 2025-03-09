@@ -1,0 +1,38 @@
+
+
+<div class="bg-[#f7f7f6] xl:h-[102vh] lg:h-[200vh] overflow-hidden lg:mb-[2%] md:mb-[-14%] sm:mb-[-17%]  pt-28 sm:pt-0 xl:mt-[1%]  xl:mb-[-6.5%] lg:pb-[-50%]" >
+    <div class="mx-auto   max-w-2xl sm:col-start-5 sm:col-span-1 px-4 py-2 sm:px-6 sm:py-28 lg:max-w-5xl lg:pb-8 lg:px-2  ">
+      <h2 class="sr-only">Products</h2>
+  
+      <div class="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8 lg:h-[320px] ">
+        <a *ngFor="let product of filteredProducts |paginate: {itemsPerPage:10,currentPage:page} " (click)="openModal(product.id, page)" class="group cursor-pointer">
+          <div class="aspect-h-3 aspect-w-4 w-full   overflow-hidden rounded-lg bg-gray-300 hover:bg-gray-400 xl:aspect-h-14 xl:aspect-w-13">
+          
+            <img [src]="product.imageUrl"  [alt]="" class="h-full w-full object-cover group-hover:opacity-75" >
+          </div>
+          <h3 class="mt-4 text-base font-bold text-gray-700 uppercase text-center">{{ product.price }} $</h3>
+        
+        </a>
+      </div>
+    </div>
+  
+</div>
+<div class="bg-[#f7f7f6] py-12 mb-[-16%] sm:mb-[2%]  sm:pt-6 sm:pb-0">
+
+  <pagination-controls  (pageChange)="page = $event"></pagination-controls>
+</div>
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,147 @@
+<!-- header.component.html -->
+<div class="bg-white z-0">
+  <header class="fixed bg-white h-20 shadow-slate-300 shadow-md inset-x-0 top-0 z-50 ">
+    
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-3 ">
+          <img class="h-[60px] w-32 hidden lg:block" src="../assets/logo.png" alt="">
+          
+        </a>
+       </div>
+      <div class="flex lg:hidden">
+        <button type="button" (click)="toggleMenu()" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black ">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex xl:gap-x-10 lg:gap-x-5">
+        <a href=""  class="uppercase text-sm font-semibold leading-6 xl:text-lg text-black border-animate">Home</a>
+       
+            
+        <div class="relative group" (mouseenter)="isOptionsOpen = true;" (mouseleave)="isOptionsOpen = false;">
+          <a  class="cursor-pointer uppercase block text-sm font-semibold leading-6 xl:text-lg text-black border-animate" >Man
+           
+          </a>
+          <div *ngIf="isOptionsOpen" class="absolute left-0 z-10 top-8 w-56 origin-top-right divide-y divide-gray-100   bg-gray-200 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div class="py-1" role="none">
+              <a (click)="closeOptions('isOptionsOpen')" [routerLink]="['/magasin','MenClothing']"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Clothing</a>
+              <a (click)="closeOptions('isOptionsOpen')" [routerLink]="['/magasin','MenShoes']"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Shoes</a>
+              <a (click)="closeOptions('isOptionsOpen')" [routerLink]="['/magasin','MenAccessories']"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Accessories</a>
+              <a (click)="closeOptions('isOptionsOpen')" [routerLink]="['/magasin','MenSports & Leisure']" class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Sports & Leisure</a>
+              <a (click)="closeOptions('isOptionsOpen')" [routerLink]="['/magasin','MenPerfume']" class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Perfume</a>
+            </div>
+          </div>
+        </div>
+        <div class="relative group" (mouseenter)="isOptionsOpen2 = true;" (mouseleave)="isOptionsOpen2 = false;">
+            <a (mouseenter)="isOptionsOpen2 = true;"   class="cursor-pointer uppercase block leading-6 font-semibold text-sm xl:text-lg text-black border-animate" >Woman
+              
+            </a>
+            <div *ngIf="isOptionsOpen2" class="absolute left-0 z-10 top-8 w-56 origin-top-right divide-y divide-gray-100  bg-gray-200  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <div class="py-1" role="none">
+                <a (click)="closeOptions('isOptionsOpen2')" [routerLink]="['/magasin','WomenClothing']"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Clothing</a>
+                <a (click)="closeOptions('isOptionsOpen2')" [routerLink]="['/magasin', 'WomenShoes']"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Shoes</a>
+                <a (click)="closeOptions('isOptionsOpen2')" [routerLink]="['/magasin', 'WomenAccessories']"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Accessories</a>
+                <a (click)="closeOptions('isOptionsOpen2')" [routerLink]="['/magasin','WomenBeautyCare']"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Beauty & Care</a>
+                <a (click)="closeOptions('isOptionsOpen2')" [routerLink]="['/magasin','WomenSportsLeisure' ]"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Sports & Leisure </a>
+                <a (click)="closeOptions('isOptionsOpen2')" [routerLink]="['/magasin','WomenPerfume' ]"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Perfume </a>
+                <a (click)="closeOptions('isOptionsOpen2')" [routerLink]="['/magasin','WomenMakeup' ]"  class="uppercase block px-4 py-2 xl:text-lg text-black hover:bg-gray-300">Makeup </a>
+              </div>
+            </div>
+          </div>
+          
+          
+    
+       
+        <a [routerLink]="['/a propos de nous']" class="uppercase border-animate text-sm font-semibold xl:text-lg leading-6 text-black">About </a>
+        <a  [routerLink]="['/Contact']" class="uppercase border-animate text-sm font-semibold leading-6 xl:text-lg text-black">Contact</a>
+
+        <button [routerLink]="['/Add']" *ngIf="isUserConnected" class="uppercase hover:bg-red-800 text-sm font-semibold leading-6 xl:text-lg text-white bg-red-700 rounded-2xl p-2">+ Add Product</button>
+        <a *ngIf="isUserConnected" (click)="logout()" class="hover:bg-red-800  bg-red-700 rounded-2xl text-white px-4 py-2 ">
+          Logout
+        </a>
+      </div>
+    </nav>
+
+  <div class="lg:hidden menu-transition" [ngClass]="{'open': isMenuOpen}" role="dialog" aria-modal="true">
+
+
+<div class="fixed inset-0 z-50" (click)="toggleMenu()"></div>
+<div class="fixed inset-y-0 w-full right-0 z-50 overflow-y-auto  bg-white px-6 h-[102vh] py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+  <div class="flex items-center justify-between">
+    <a href="#" class="-m-1.5 p-1.5 ">
+      <span class="sr-only">Your Company</span>
+      <img class="h-[60px] w-[150px] ml-10" src="../assets/logo.png" alt="">
+    </a>
+    
+    <button type="button" (click)="toggleMenu()" class="-m-2.5 rounded-md p-2.5 text-black">
+      <span class="sr-only">Close menu</span>
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <div class="mt-4 flow-root">
+    <div class=" divide-y divide-gray-500/10">
+      <div class="space-y-2 py-2">
+        <a href="" class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Home</a>
+        
+        <div class="flex"> 
+          <button (click)="toggleSubMenu(1)">
+        <a  class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200"> Man
+        
+          <svg class="h-5 w-5 inline-block ml-1 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg></a>
+        </button>
+      </div>
+      <div *ngIf="isSubMenuOpen1" >
+        <a [routerLink]="['/magasin','marbre','polish']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Clothing</a>
+        <a [routerLink]="['/magasin','marbre','protection']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Shoes</a>
+        <a [routerLink]="['/magasin','marbre','outils']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Accessories</a>
+        <a [routerLink]="['/magasin','marbre','traitement']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Sports & Leisure</a>
+        <a [routerLink]="['/magasin','marbre','traitement']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Perfume</a>
+      </div>
+       
+      
+      <div class="flex">
+        <button (click)="toggleSubMenu(2)" >
+        <a  class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Woman
+        
+        <svg class="h-5 w-5 inline-block ml-1 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg> </a>
+      </button>
+    </div>
+    <div *ngIf="isSubMenuOpen2" >
+      <a [routerLink]="['/magasin','poncage','machines']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Clothing</a>
+      <a [routerLink]="['/magasin','poncage','polish']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Shoes</a>
+      <a [routerLink]="['/magasin','poncage','protection']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Accessories</a>
+      <a [routerLink]="['/magasin','poncage','outils']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Beauty & Care</a>
+      <a [routerLink]="['/magasin','poncage','traitement']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Sports & Leisure</a>
+      <a [routerLink]="['/magasin','poncage','traitement']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Perfume</a>
+      <a [routerLink]="['/magasin','poncage','traitement']"  (click)="toggleMenu()" class="uppercase block rounded-lg px-8 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Makeup</a>
+    </div> 
+
+
+
+        <div class="sm:mt-4">
+         
+          
+          <a [routerLink]="['/a propos de nous']" (click)="toggleMenu()" class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">About</a>
+          <a [routerLink]="['/Contact']" (click)="toggleMenu()" class="uppercase -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-200">Contact</a>
+
+          <a [routerLink]="['/Contact']" *ngIf="isUserConnected" (click)="toggleMenu()" class="uppercase -mx-3 block  px-3 py-2 mb-6 text-base font-semibold leading-7 text-white hover:bg-red-800  bg-red-700 rounded-2xl">+ Add Product</a>
+          <a *ngIf="isUserConnected" (click)="logout()" class="uppercase -mx-3 block  px-3 py-2 my-6 text-base font-semibold leading-7 text-white hover:bg-red-800  bg-red-700 rounded-2xl">
+            Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  </header>

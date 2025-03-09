@@ -1,0 +1,64 @@
+
+.description-container {
+    max-height: 28em; 
+    overflow-y: hidden; 
+    position: relative;
+    transition: max-height 0.3s ease; 
+    overflow-y: auto;
+}
+
+.description-content {
+    overflow-y: auto; 
+    height: 100%; 
+   
+    scrollbar-width: thin; 
+    scrollbar-color: transparent; 
+}
+
+
+.description-container::-webkit-scrollbar {
+    width: 12px; 
+}
+
+.description-container::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.description-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #018b28, #FFFFFF, #C8102E); 
+   
+}
+
+.description-container.expanded {
+    max-height: 16em;
+    overflow-y: auto; 
+}
+
+.show-more {
+    display: block;
+    margin-top: 0.5em;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.show-more:hover {
+    color: darkblue;
+}
+@media (max-width: 1100px) { 
+    .description-container {
+      margin-bottom: 100px;
+    }}
+
+
+@media (max-width: 650px) { 
+    .description-container {
+        max-height: none; 
+        overflow-y: visible; 
+      margin-bottom: 150px;
+    }
+
+    .show-more {
+        display: none; 
+    }
+}
